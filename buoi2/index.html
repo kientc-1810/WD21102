@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // mảng là gì?
+        // mảng là tập hợp của nhiều phẩn tử có cùng chung bản chất
+        // mỗi phần tử của mảng ngăn cách nhau bằng dấu ,
+        // phần tử sẽ có n phần tử nhưng vị trí phần tử thì chạy từ 0 -> n-1
+        // ví dụ khai báo mảng
+        // theList = ['bánh mì','kem','bơ','sữa'];
+        // console.log(theList);
+        // xóa phần tử đầu
+        // theList.shift();
+        // xóa phần tử cuối
+        // theList.pop();
+        // thêm phần tử đầu
+        // theList.unshift('phở');
+        // thêm phần tử cuối
+        // theList.push('phở');
+        // thêm phần tử vào vị trí bất kỳ
+        // theList.splice(3,0,'phở'); // số đầu là vị trí
+        // xóa phần tử vị trí bất kỳ
+        // theList.splice(0,3)
+        // console.log(theList);
+
+        // đối tượng là tập hợp các phần tử có 2 thành phần
+        // thuộc tính và phương thức
+        // trong đó thuộc tính là các đặc điểm cấu tạo nên đối tượng
+        // phương thức là các hoạt động của đối tượng
+        // ví dụ: khai báo nhiều kiểu dữ liệu khác nhau
+        // var name = "A";
+        // const age = 18;
+        // let person = {
+        //     // thuộc tính : giá trị thuộc tính
+        //     name : "Nguyễn Văn A",
+        //     age : 18,
+        //     job : "student",
+        // }
+        // // in ra giá trị 
+        // console.log("Tên: "+name);
+        // console.log("Tuổi: "+age);
+        // console.log("Thông tin cá nhân: "+person);
+        // // gọi giá trị của đối tượng
+        // // khi muốn lấy giá trị của đối tượng thì phải gọi ra đối tượng sau đó gọi đến thuộc tính của đối tượng
+        // // ví dụ: person.name trong đó person là đối tượng và name là thuộc tính
+        // console.log('Thông tin cá nhân: '+"tên: "+person.name+", tuổi: "+person.age+", nghề nghiệp: "+person.job);
+        // // hiển thị trên nền web
+        // document.write('Thông tin cá nhân: '+"tên: "+person.name+", tuổi: "+person.age+", nghề nghiệp: "+person.job);
+
+
+        // ép kiểu
+        // ép kiểu ngầm định
+        // ép từ chuỗi về số
+        // phép cộng
+        // let tong = "5"+2;
+        // console.log(tong);
+        // phép trừ
+        // let tru = "7"-4;
+        // console.log(tru);
+        // phép nhân
+        // let nhan = "6"*3;
+        // console.log(nhan);
+
+
+        // ép kiểu tường minh
+        // chuỗi sang số
+        // let str = "123";
+        // let num = Number(str);
+        // console.log(num);
+        // số sang chuỗi
+        // let n = 456;
+        // let string = String(n);
+        // console.log(string);
+        // ép boolean
+        // console.log(Boolean(0));
+        // console.log(Boolean(""));
+        // console.log(Boolean("Hello"));
+        // console.log(Boolean("123456789"));
+
+
+        // if else, for
+        // if là câu điều kiện rẽ nhánh nếu
+        // var tuoi = 19;
+        // if(tuoi >= 18){
+        //     alert("Đủ tuổi đi nghĩa vụ");
+        // }
+
+        // if else là câu điều kiện rẽ nhánh nếu ... thì ...
+        // var diem = prompt('Nhập điểm của bạn');
+        // if(diem >= 5){
+        //     alert("Qua môn")
+        // }else{
+        //     alert("Nộp học phí học lại")
+        // }
+
+        // ví dụ về if else
+        // nhập 1 số từ bàn phím
+        // xác định xem số đó là số chẵn hay lẻ
+
+        // ví dụ về giải phương trình bậc 1 ax+b=0
+        // với a và b nhập từ bàn phím
+        // viết mã nguồn(code) để xác định x
+        // xử lý về nhập a và b trên bàn phím
+        // var a = prompt("nhập a: ");
+        // var b = prompt("nhập b: ");
+        // // lập điều kiện dành cho phương trình
+        // if(a == 0){
+        //     alert("Phương trình vô nghiệm");
+        // }else{
+        //     alert("Phương trình có nghiệm là: " + (-b/a));
+        // }
+
+        // if...else if...else
+        // var diem = prompt("nhập điểm của bạn: ");
+        // if(diem<5){
+        //     alert('Sinh viên loại yếu');
+        // }else if(diem >=5 && diem < 6.5){
+        //     alert('Sinh viên loại trung bình');
+        // }else if(diem >=6.5 && diem < 8){
+        //     alert('Sinh viên loại khá');
+        // }else{
+        //     alert('Sinh viên loại giỏi');
+        // }
+
+        // for là vòng lặp
+        // for gồm 3 thành phần là điều kiện bắt đầu, điều kết thúc và bước nhảy
+        // in một dãy số từ 0 đến 7
+        // for(var i = 0;i < 8; i++){
+        //     console.log(i);
+        // }
+
+        // ví dụ:
+        // nhập một số n từ bàn phím
+        // xây dựng đoạn code tính tổng từ 0 đến số n
+        var n = prompt("Nhập n:");
+        var tong = 0;
+        for(let i = 0; i<= n; i++){
+            tong += i;
+            // tong = tong + i;
+        }
+        alert('Tổng của dãy số là: '+ tong);
+
+
+    </script>
+</body>
+</html>

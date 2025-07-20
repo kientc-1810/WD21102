@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // hàm là gì?
+        // hàm là một đoạn code được đóng gói ở trong một function nào đó
+        // hàm mang tính tái sử dụng nghĩa là viết 1 lần nhưng sử dụng được nhiều lần
+
+        // hàm có 2 loại: hàm có trả về hoặc hàm không trả về
+        // hàm có trả về thì sẽ có return
+        // ngược lại hàm không trả về thì sẽ không có return
+
+        // khai báo hàm
+        // cú pháp: function tên_hàm (tham số){
+            // đoạn mã code
+        //}
+        // ví dụ: bài toán tính tổng
+        // dạng hàm không trả về
+
+        // function tinhTong(){
+        //     // lưu ý: trong phần () là tham số, có thể có hoặc không có tham số
+        //     let a = 6;
+        //     let b = 15;
+        //     let tong = a + b;
+        //     alert (tong);
+        // }
+        // gọi hàm để sử dụng
+        // tinhTong();
+
+
+        // hàm có trả về và có tham số
+        // khai báo hàm
+        // function tinhTongReturn(a,b){
+        //     return a + b;
+        // }
+        // var tong = tinhTongReturn(27,30);
+        // var tong1 = tinhTongReturn(15,10);
+        // alert(tong1);
+
+        // ví dụ:
+        // nhập n từ bàn phím, kiểm tra xem nó là số chẵn hay lẻ
+        // hàm có trả về
+
+        // let n = prompt("Nhập n: ");
+        // function check(n){
+        //     if(n % 2 == 0){
+        //         return "đây là số chẵn";
+        //     }else{
+        //         return "đây là số lẻ";
+        //     }
+        // }
+        // let c = check(n);
+        // alert(c);
+
+        // nhập 2 số a và b từ bàn phím, 
+        // thực hiện viết hàm tính diện tích và chu vi hình chữ nhật
+
+        // khai báo a và b để nhập từ bàn phím
+        var a = parseFloat(prompt('Nhập chiều dài: '));
+        var b = parseFloat(prompt('Nhập chiều rộng: '));
+
+        // khai báo hàm tính chu vi
+        function tinhChuVi(){
+            var chuVi = 2 * ( a + b );
+            return chuVi;
+        }
+        // khai báo hàm tính diện tich
+        function tinhDienTich(){
+            var dienTich = a * b;
+            return dienTich;
+        }
+
+        // gọi hàm để sử dụng
+        var chuVi = tinhChuVi();
+        alert("Chu vi hình chữ nhật là: "+chuVi);
+        // gọi hàm để sử dụng
+        var dienTich = tinhDienTich();
+        alert("Diện tích hình chữ nhật là: "+dienTich);
+
+    </script>
+</body>
+</html>
