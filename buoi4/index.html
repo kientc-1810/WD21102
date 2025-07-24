@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // khai báo 1 mảng
+        var arr = [1,2,3,4,5,6,7,8,9,10];
+        // cấu trúc for
+        // for(let i = 0;i < arr.length; i++){
+        //     console.log(i);
+        // }
+
+        // for ... of
+        // cấu trúc
+        // for ( mảng tạm nhớ of mảng ban đầu)
+        // for(let value of arr){
+        //     console.log(value);
+        // }
+
+        // khai báo 1 mảng số nguyên gồm 10 phần tử
+        // dùng for để thêm giá trị
+        // dùng for để tính tổng số chẵn 
+        // dùng for...of để tính tổng các số lẻ
+
+        // khai báo mảng rỗng
+        // var arr = [];
+        // dùng for để thêm giá trị
+        // for(let i = 1; i <= 10; i++){
+        //     arr.push(i);
+        // }
+        // console.log(arr);
+
+        // dùng for để tính tổng chẵn
+        // khai báo tổng chẵn ban đầu
+        // var tongChan = 0;
+        // dùng for để tìm ra số chẵn trong mảng
+        // for(let i = 0; i < arr.length; i++){
+        //     if(arr[i]%2 == 0){
+        //         // tính tổng các số chẵn
+        //             tongChan += arr[i];
+        //     }
+        // }
+        // console.log(tongChan);
+        // console.log(arr[5]);
+        // i là vị trí phần từ
+        // arr[i] lấy giá trị của phần tử tại vị trí i
+
+        // var tongLe = 0 
+        // for(let value of arr){
+        //     if(value%2 != 0){
+        //         // tính tổng các số chẵn
+        //             tongLe += value;
+        //     }
+        // }
+        // console.log(tongLe);
+
+        // bài tập
+        // khai báo 1 mảng chứa tên người yêu cũ
+        // nhập vào 1 tên bất kỳ
+        // kiểm tra xem là tên này đã có ở trong mảng người yêu cũ hay chưa
+        // nếu có thì thông báo ra màn hình là "đừng có làm thế"
+        // nếu không thì đưa vào trong mảng
+
+        // khai báo mảng
+        var NYC = ["Như","Uyên","Nhi"];
+        // nhập tên
+        var nameCheck = prompt("Nhập tên: ");
+        // check true, false
+        var isCheck = false;
+        // chuyển tên người nhập và các phần tử trong mảng về dạng chữ thường để so sanh
+        var nameCheckLower = nameCheck.toLowerCase();
+
+        // quá trình kiểm tra
+        for(let value of NYC){
+            // if(value == nameCheck){
+            //     isCheck = true;
+            // }
+
+            if(value.toLowerCase() == nameCheckLower){
+                isCheck = true;
+            }
+        }
+
+        if(isCheck == false){
+            // NYC.push(nameCheck);
+            // console.log(NYC)
+
+            let nameFormat = nameCheck.charAt(0).toUpperCase() + nameCheck.slice(1).toLowerCase();
+            NYC.push(nameFormat);
+            console.log(NYC);
+        }else{
+            alert("Đừng có làm như thế")
+        }
+
+
+    </script>
+</body>
+</html>
