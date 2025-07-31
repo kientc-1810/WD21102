@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Đối tượng gồm 2 thành phần
+        // Thuộc tính(đặc điểm) là những gì cấu thành nên đối tượng 
+        // trong lập trình hiểu đơn giản là khai báo biến
+        // Phương thức(Hoạt động) là những hoạt động của đối tượng
+        // trong lập trình hiểu đơn giản là khai báo hàm
+
+        // khai báo đối tượng
+        // let SV = {
+        //     // thuộc tính: giá trị
+        //     // ngăn cách các thuộc tính bằng dấu phẩy
+        //     ten: "Nguyễn Văn A",
+        //     tuoi: 18,
+        //     lop: "WD21102",
+        //     nganhHoc: "CNTT",
+
+        //     // tên phương thức:function(có thể chứa tham số){logic xử lý}
+        //     di:function(){
+        //         alert("Đi bằng 2 chân");
+        //     },
+        //     hienThi:function(){
+        //         return this.ten + " - " + this.lop;
+        //     }
+        // }
+
+        // gọi thuộc tính sử dụng
+        // console.log(SV);
+        // ví dụ: gọi mình thuộc tính tên
+        // console.log(SV.ten);
+        // console.log(SV['ten']);
+
+        // gọi phương thức sử dụng
+        // SV.di();
+
+        // console.log(SV.hienThi());
+
+
+        // ví dụ:
+        // tạo 1 đối tượng là crush gồm những thuộc tính sau:
+        // tên, năm sinh, lớp, số đo 3 vòng
+        // hiển thị lần lượt các thông tin của crush
+        // đối tượng có 1 phương thức là tính trung bình số đo 3 vòng
+
+        // let crush = {
+        //     ten: "Nguyễn Thị Hương",
+        //     namSinh: "2005",
+        //     vong1: 90,
+        //     vong2: 60,
+        //     vong3: 85,
+
+        //     soDo:function(){
+        //         let trungBinh = (this.vong1 + this.vong2 + this.vong3)/3;
+        //         console.log(`Trung bình số đo 3 vòng là: ${trungBinh}`);
+        //     }
+        // }
+        // console.log(crush.ten);
+        // crush.soDo();
+
+
+        // tạo 1 nút hình chữ nhật bắt sự kiện onclick
+        // tạo hàm tính toán
+        // 2 thuộc tính: chiều dài, chiều rộng (nhập từ bàn phím)
+        // phương thức: tính chu vi, tính diện tích
+        // click vào nút thì sẽ in ra kết quả tính diện tích và chu vi
+
+        function xuLy(){
+            // nhập từ bàn phím
+            let chieuDai = prompt("Nhập chiều dài: ");
+            let chieuRong = prompt("Nhập chiều rộng: ");
+
+            // khai báo đối tượng
+            let hinhChuNhat = {
+                // khai báo thuộc tính
+                chieu_dai : chieuDai,
+                chieu_rong : chieuRong,
+
+                // khai báo phương thức
+                tinhChuVi:function(){
+                    let chuVi = (this.chieu_dai + this.chieu_rong) * 2;
+                    console.log("Chu vi hình chữ nhật là: ",chuVi);
+                },
+
+                tinhDienTich:function(){
+                    let dienTich = this.chieu_dai * this.chieu_rong;
+                    console.log("Diện tích hình chữ nhật là: ",dienTich);
+                }
+            }
+            // gọi phương thức tính chu vi và diện tích
+            hinhChuNhat.tinhChuVi();
+            hinhChuNhat.tinhDienTich();
+        }
+    </script>
+    <button onclick="xuLy()">Gửi</button>
+    
+</body>
+</html>
