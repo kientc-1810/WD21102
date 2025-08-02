@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // class (lớp) là tập hợp của các đối tượng có cùng chung
+    // thuộc tính và phương thức 
+    // (phương thức có thể mỗi đối tượng sẽ phát sinh khác nhau)
+
+    // tạo 1 class sinhVien
+    // thuộc tính: tên, năm sinh, lớp học
+    // phương thức: tính tuổi
+
+    // cú pháp class
+    // class tên_class
+    class sinhVien{
+        constructor(ten,namSinh){
+            // khai báo các thuộc tính
+            this.name = ten;
+            this.age = namSinh;
+        }
+        
+        // khai báo phương thức tính tuổi
+        tinhTuoi() {
+            let namNay = new Date().getFullYear();
+            return namNay - this.age;
+        }
+    }
+
+    // tạo 1 mảng rỗng, mảng này sẽ chứa 5 phần tử thông qua class
+    // in ra toàn bộ thuộc tính và tính tuổi
+
+    let arrSV = [];
+    // thêm phần tử vào mảng
+    arrSV.push(new sinhVien("Nguyễn Văn A",2005));
+    console.log(arrSV);
+
+    // duyệt mảng
+    for(let item of arrSV){
+        console.log(item.name);
+        console.log(item.age);
+        console.log(item.tinhTuoi());
+    }
+
+    </script>
+</body>
+</html>
